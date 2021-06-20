@@ -53,7 +53,7 @@ main{
     border:none;
     line-height: 40px;
 }
-.box p span{
+.box h5 span{
     font-size: 30px;
     color: #e2b714;
 }
@@ -64,5 +64,10 @@ main{
 }
 #about-me a:hover{
     color: #fff; 
-
+}
+#paraContainer p{
+    display: none;
+}
+#paragarph{
+    display: inline;
 }
