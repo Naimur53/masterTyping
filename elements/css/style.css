@@ -1,0 +1,68 @@
+body{
+    background-color: #323437;
+    color: #fff;
+    font-size: 18px;
+}
+.paragraph-container{
+    text-align: center;
+}
+.paragraph-container span{
+    transition:.2555s;
+
+}
+.typing-aria{
+    display: flex;
+    justify-content: center;
+}
+textarea{
+    resize: none;   
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    color:#fff;
+    border-radius: 5px;  
+}
+ 
+textarea:focus-visible{ 
+    border-color:#e2b714 ;
+}
+::selection{
+    background-color: #646669;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+.result{
+    height: 100vh;
+   
+}
+.box{
+    width: 300px;
+    height: 300px; 
+    font-size: 25px;
+    color: #646669;
+    border-radius: 40px;
+}
+.box button{
+    background-color: #e2b714;
+    border-radius: 10px;
+    border:none;
+    line-height: 40px;
+}
+.box p span{
+    font-size: 30px;
+    color: #e2b714;
+}
+#about-me a{
+    color: #646669;
+    transition: .3s; 
+
+}
+#about-me a:hover{
+    color: #fff; 
+
+}
