@@ -22,7 +22,7 @@ document.getElementById("paragraph").style.display = "none";
 //split finish
 // get all span that we create in for loop
 const allSpan = document.getElementsByTagName("span").length;
-
+document.getElementsByTagName("span")[0].style.borderLeft="1px solid #646669";
 document.getElementById("user-text").addEventListener("input", function main() {
     const input = document.getElementById("user-text").value;
     let inputSplit = input.split('');
@@ -38,11 +38,11 @@ document.getElementById("user-text").addEventListener("input", function main() {
 
         const howManySpan = document.getElementsByTagName("span");
         const letter = howManySpan[i].innerText;
-        howManySpan[i].style.border="none";
-        howManySpan[i+1].style.borderLeft="1px solid red";
+        howManySpan[i].style.borderLeft="none";
+        howManySpan[i+1].style.borderLeft="1px solid #646669"; 
 
         if (element == letter) {
-            howManySpan[i].style.color = "#646669";
+            howManySpan[i].style.color = "#fff";
         }
         else {
             howManySpan[i].style.color = "red";
@@ -56,7 +56,7 @@ document.getElementById("user-text").addEventListener("input", function main() {
         document.getElementById("user-text").onkeydown = function () {
             var key = event.keyCode || event.charCode;
             if (key == 8) {
-                howManySpan[i].style.color = "#fff";
+                howManySpan[i].style.color = "#646669";
                 howManySpan[i+1].style.border="none";
 
 

@@ -1,15 +1,19 @@
 body{
     background-color: #323437;
-    color: #fff;
+    color: #646669;
     font-size: 23px;
+    font-family: 'Roboto', sans-serif; 
 }
 .paragraph-container{
     text-align: center;
 }
 .paragraph-container span{
-    transition:.2555s;
-
-}
+    font-weight:400;
+    transition:.3s;   
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}  
+@keyframes blink { 50% { border-color: #e2b714; }  }
 .typing-aria{
     display: flex;
     justify-content: center;
@@ -17,7 +21,7 @@ body{
 #paraContainer p{
     display: none;
 }
-#paragarph{
+#paragraph{
     display: inline;
     position: relative;
 }
@@ -35,6 +39,7 @@ textarea{
     right: 0;
     border: none;  
     opacity: 0;
+    z-index: 1;
 }
  
 textarea:focus-visible{ 
@@ -46,13 +51,12 @@ textarea:focus-visible{
 main{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 80vh;
 }
 .result{
-    height: 100vh;
-   
+    height: 100vh; 
 }
 .box{
     width: 300px;
@@ -70,6 +74,10 @@ main{
 .box h5 span{
     font-size: 30px;
     color: #e2b714;
+    border: none!important;
+}
+#about-me{ 
+    z-index: 2; 
 }
 #about-me a{
     color: #646669;
