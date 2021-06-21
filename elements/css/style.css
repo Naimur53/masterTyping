@@ -4,7 +4,7 @@ body{
     font-size: 23px;
     font-family: 'Roboto', sans-serif; 
 }
-.paragraph-container{
+.paragraph-container{ 
     text-align: center;
 }
 .paragraph-container span{
@@ -20,7 +20,7 @@ body{
 }
 #paraContainer p{
     display: none;
-}
+} 
 #paragraph{
     display: inline;
     position: relative;
@@ -40,11 +40,7 @@ textarea{
     border: none;  
     opacity: 0;
     z-index: 1;
-}
- 
-textarea:focus-visible{ 
-    /* border-color:#e2b714 ; */
-}
+} 
 ::selection{
     background-color: #646669;
 }

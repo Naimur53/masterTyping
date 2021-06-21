@@ -21,8 +21,10 @@ for (let i = 0; i < splitPara.length; i++) {
 document.getElementById("paragraph").style.display = "none";
 //split finish
 // get all span that we create in for loop
+
 const allSpan = document.getElementsByTagName("span").length;
 document.getElementsByTagName("span")[0].style.borderLeft="1px solid #646669";
+
 document.getElementById("user-text").addEventListener("input", function main() {
     const input = document.getElementById("user-text").value;
     let inputSplit = input.split('');
@@ -38,18 +40,20 @@ document.getElementById("user-text").addEventListener("input", function main() {
 
         const howManySpan = document.getElementsByTagName("span");
         const letter = howManySpan[i].innerText;
-        howManySpan[i].style.borderLeft="none";
+        howManySpan[i].style.border="none";
         howManySpan[i+1].style.borderLeft="1px solid #646669"; 
 
         if (element == letter) {
             howManySpan[i].style.color = "#fff";
+            console.log("right ele",element);
         }
         else {
             howManySpan[i].style.color = "red";
 
             wrongKey++;// problem
-        }
-        console.log(wrongKey);
+            console.log("wrong ele",element);
+
+        } 
         result("wrong", wrongKey); //this function is written in below
 
         //backspace btn press
@@ -101,8 +105,7 @@ function calculate(time, wrongKey) {
     else {
         word = 0;
         result("wpm", word);
-    }
-    console.log("speed", word);
+    } 
 
 }
 function result(id, value) {
