@@ -1,7 +1,7 @@
 body{
     background-color: #323437;
     color: #fff;
-    font-size: 18px;
+    font-size: 23px;
 }
 .paragraph-container{
     text-align: center;
@@ -14,17 +14,31 @@ body{
     display: flex;
     justify-content: center;
 }
+#paraContainer p{
+    display: none;
+}
+#paragarph{
+    display: inline;
+    position: relative;
+}
 textarea{
     resize: none;   
     outline: none;
     width: 100%;
     background-color: transparent;
     color:#fff;
-    border-radius: 5px;  
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: none;  
+    opacity: 0;
 }
  
 textarea:focus-visible{ 
-    border-color:#e2b714 ;
+    /* border-color:#e2b714 ; */
 }
 ::selection{
     background-color: #646669;
@@ -64,10 +78,4 @@ main{
 }
 #about-me a:hover{
     color: #fff; 
-}
-#paraContainer p{
-    display: none;
-}
-#paragarph{
-    display: inline;
 }

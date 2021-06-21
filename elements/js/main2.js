@@ -38,6 +38,8 @@ document.getElementById("user-text").addEventListener("input", function main() {
 
         const howManySpan = document.getElementsByTagName("span");
         const letter = howManySpan[i].innerText;
+        howManySpan[i].style.border="none";
+        howManySpan[i+1].style.borderLeft="1px solid red";
 
         if (element == letter) {
             howManySpan[i].style.color = "#646669";
@@ -55,6 +57,8 @@ document.getElementById("user-text").addEventListener("input", function main() {
             var key = event.keyCode || event.charCode;
             if (key == 8) {
                 howManySpan[i].style.color = "#fff";
+                howManySpan[i+1].style.border="none";
+
 
             }
         }
