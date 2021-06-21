@@ -2,7 +2,14 @@ body{
     background-color: #323437;
     color: #646669;
     font-size: 23px;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;  
+}
+h2{
+    font-size: 35px; 
+    letter-spacing: 1.5px;
+    color: #e2b714;
+    font-family: 'Roboto Mono', monospace;
+
 }
 .paragraph-container{ 
     text-align: center;
@@ -49,23 +56,23 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-}
-.result{
-    height: 100vh; 
-}
+    height: 65vh;
+} 
 .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 300px;
     height: 300px; 
     font-size: 25px;
     color: #646669;
     border-radius: 40px;
 }
-.box button{
+.box .btn button{
     background-color: #e2b714;
     border-radius: 10px;
-    border:none;
-    line-height: 40px;
+    border:none; 
+    padding: 10px 15px;
 }
 .box h5 span{
     font-size: 30px;

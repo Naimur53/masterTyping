@@ -18,8 +18,9 @@
   <title>Hello, world!</title>
 </head>
 
-<body>
-  <main id="main" class="container">
+<body class="container"> 
+  <h2 class="text-start py-4">mastertype</h2> 
+  <main id="main"> 
     <div id="paraContainer" class="paragraph-container">
       <p>Shakib Al Hasan is a Bangladeshi international cricketer and philanthropist. Shakib is considered to be one of the greatest all-rounders of  alltimes</p> 
       <p>Early modern human or anatomically modern human are terms used to distinguish Homo sapiens that are anatomically consistent with the range of phenotypes</p>
@@ -39,11 +40,13 @@
 
   </main>
 
-  <div id="result" class="result w-100  justify-content-center align-items-center " style="display: none;">
+  <div id="result" class="result w-100 justify-content-center align-items-center " style="display: none;">
     <div class="box text-center ">
       <h5> WPM <br> <span id="wpm">0</span></h5>
       <h5> wrong key typed <br> <span id="wrong">0</span></h5>
+     <div class="btn">
       <button id="retry" onClick="window.location.reload()">Retry</button>
+     </div>
     </div>
   </div>
   <!-- Optional JavaScript; choose one of the two! -->

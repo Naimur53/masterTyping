@@ -45,13 +45,12 @@ document.getElementById("user-text").addEventListener("input", function main() {
 
         if (element == letter) {
             howManySpan[i].style.color = "#fff";
-            console.log("right ele",element);
+            
         }
         else {
-            howManySpan[i].style.color = "red";
-
-            wrongKey++;// problem
-            console.log("wrong ele",element);
+            howManySpan[i].style.color = "red"; 
+            wrongKey++; 
+             
 
         } 
         result("wrong", wrongKey); //this function is written in below
@@ -61,30 +60,28 @@ document.getElementById("user-text").addEventListener("input", function main() {
             var key = event.keyCode || event.charCode;
             if (key == 8) {
                 howManySpan[i].style.color = "#646669";
-                howManySpan[i+1].style.border="none";
-
-
+                howManySpan[i+1].style.border="none"; 
             }
         }
     }
     //finish the para
-    if (input.length == paragraph.length) {
-        console.log("done");
+    if (input.length == paragraph.length) { 
+
         var end = new Date().getTime();
         var time = end - start;
-        time = time / 1000;
-        console.log(time);
+
+        time = time / 1000; 
         calculate(time ,wrongKey);
         animation();
-        document.getElementById("user-text").value = '';
 
+        document.getElementById("user-text").value = ''; 
     }
 })
 //calculate wpm 
 function calculate(time, wrongKey) {
     const text = document.getElementById("user-text").value;
     let count = 0;
-    console.log(text);
+     
     for (let i = 0; i < text.length; i++) {
         const element = text[i];
         if (element == " ") {
@@ -95,10 +92,13 @@ function calculate(time, wrongKey) {
 
     time = time / 60;
     let word = count / 5;
+
     wrongKey = wrongKey / 5;
     word = word - wrongKey;
+
     word = word / time;
     word = Math.round(word);
+    
     if (word > 0) {
         result("wpm", word);
     }
