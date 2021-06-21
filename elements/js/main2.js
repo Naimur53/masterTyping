@@ -1,12 +1,12 @@
 //select paragrph
-let random = Math.random()*5;
+let random = Math.random() * 5;
 random = Math.round(random);
 const allP = document.getElementsByTagName("p");
-allP[random].setAttribute("id","paragraph");
+allP[random].setAttribute("id", "paragraph");
 
 
 
-
+//paragraph split
 const paragraph = document.getElementById("paragraph").innerText;
 const splitPara = paragraph.split('');
 document.getElementById("user-text").setAttribute("maxlength", splitPara.length);
@@ -19,35 +19,38 @@ for (let i = 0; i < splitPara.length; i++) {
     document.getElementById("paraContainer").appendChild(span);
 }
 document.getElementById("paragraph").style.display = "none";
+//split finish
+// get all span that we create in for loop
 const allSpan = document.getElementsByTagName("span").length;
-var wrongKey = 0;
 
 document.getElementById("user-text").addEventListener("input", function main() {
     const input = document.getElementById("user-text").value;
     let inputSplit = input.split('');
+    var wrongKey = 0;//for wrong count
+
+    //now start the timer
     if (input.length == 1) {
         start = new Date().getTime();
-        console.log(start);
-
     }
+    // now check wrong or right
     for (let i = 0; i < inputSplit.length; i++) {
         const element = input[i];
-        console.log(element);
+
         const howManySpan = document.getElementsByTagName("span");
-        console.log(howManySpan[i]);
         const letter = howManySpan[i].innerText;
-        console.log(letter);
 
         if (element == letter) {
             howManySpan[i].style.color = "#646669";
         }
         else {
             howManySpan[i].style.color = "red";
-            wrongKey++;
-            result("wrong", wrongKey);
 
-
+            wrongKey++;// problem
         }
+        console.log(wrongKey);
+        result("wrong", wrongKey); //this function is written in below
+
+        //backspace btn press
         document.getElementById("user-text").onkeydown = function () {
             var key = event.keyCode || event.charCode;
             if (key == 8) {
@@ -56,19 +59,21 @@ document.getElementById("user-text").addEventListener("input", function main() {
             }
         }
     }
+    //finish the para
     if (input.length == paragraph.length) {
         console.log("done");
         var end = new Date().getTime();
         var time = end - start;
         time = time / 1000;
         console.log(time);
-        calculate(time);
+        calculate(time ,wrongKey);
         animation();
         document.getElementById("user-text").value = '';
 
     }
 })
-function calculate(time) {
+//calculate wpm 
+function calculate(time, wrongKey) {
     const text = document.getElementById("user-text").value;
     let count = 0;
     console.log(text);
@@ -91,7 +96,7 @@ function calculate(time) {
     }
     else {
         word = 0;
-        result("wpm", word); 
+        result("wpm", word);
     }
     console.log("speed", word);
 
