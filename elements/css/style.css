@@ -15,11 +15,17 @@ h2{
     text-align: center;
 }
 .paragraph-container span{
+    font-weight:400; 
+    border-left:2px solid transparent ; 
+    border-radius:2px;  
+
+}   
+.paragraph-container span:nth-child(7){
     font-weight:400;
     transition:.3s;   
-    animation: blink 1s;
+    animation: blink 1s; 
     animation-iteration-count: infinite;
-}  
+} 
 @keyframes blink { 50% { border-color: #e2b714; }  }
 .typing-aria{
     display: flex;

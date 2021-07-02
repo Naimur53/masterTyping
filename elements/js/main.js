@@ -23,9 +23,12 @@ document.getElementById("paragraph").style.display = "none";
 // get all span that we create in for loop
 
 const allSpan = document.getElementsByTagName("span").length;
-document.getElementsByTagName("span")[0].style.borderLeft="1px solid #646669";
+document.getElementsByTagName("span")[0].style.borderLeft="2px solid #646669";
 
 document.getElementById("user-text").addEventListener("input", function main() {
+
+    document.getElementsByTagName("span")[0].style.animation = "none";
+
     const input = document.getElementById("user-text").value;
     let inputSplit = input.split('');
     var wrongKey = 0;//for wrong count
@@ -40,8 +43,8 @@ document.getElementById("user-text").addEventListener("input", function main() {
 
         const howManySpan = document.getElementsByTagName("span");
         const letter = howManySpan[i].innerText;
-        howManySpan[i].style.border="none";
-        howManySpan[i+1].style.borderLeft="1px solid #646669"; 
+        howManySpan[i].style.borderColor = "transparent"; 
+        howManySpan[i+1].style.borderLeft="2px solid #e2b714"; 
 
         if (element == letter) {
             howManySpan[i].style.color = "#fff";
@@ -60,7 +63,7 @@ document.getElementById("user-text").addEventListener("input", function main() {
             var key = event.keyCode || event.charCode;
             if (key == 8) {
                 howManySpan[i].style.color = "#646669";
-                howManySpan[i+1].style.border="none"; 
+                howManySpan[i + 1].style.borderColor = "transparent"; 
             }
         }
     }
