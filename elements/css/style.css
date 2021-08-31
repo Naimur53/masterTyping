@@ -16,6 +16,7 @@ h2{
 }
 .paragraph-container span{
     font-weight:400; 
+    font-size: 24px;
     border-left:2px solid transparent ; 
     border-radius:2px;  
 
